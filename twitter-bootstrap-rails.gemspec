@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency             'actionpack', '>= 3.1'
 
   s.add_dependency  'execjs', '~>1.4.0'
+  s.add_dependency 'less-js'
 
-  s.add_runtime_dependency     'less-rails', '~> 2.2.3'
   s.add_development_dependency 'rails', '>= 3.1'
 end
