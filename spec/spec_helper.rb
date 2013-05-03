@@ -9,3 +9,8 @@ require 'bundler/setup'
 require 'action_view'
 require 'active_support'
 require 'twitter-bootstrap-rails'
+require 'rspec/rails'
+require 'genspec'
+require 'factory_girl_rails'
+require 'capybara/rspec'
+include RSpec::Rails::ControllerExampleGroup

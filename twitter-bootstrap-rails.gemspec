@@ -24,6 +24,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'less'
   s.add_development_dependency 'therubyracer', '0.11.1'
   s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'genspec'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'factory_girl_rails'
   s.add_development_dependency 'rake'
   s.post_install_message = "Important: You may need to add a javascript runtime to your Gemfile in order for bootstrap's LESS files to compile to CSS. \n\n" \
   "**********************************************\n\n" \

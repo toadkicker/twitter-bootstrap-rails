@@ -11,4 +11,5 @@ group :test do
   gem 'turn'
   gem 'coveralls'
   gem 'rspec'
+  gem 'genspec'
 end
