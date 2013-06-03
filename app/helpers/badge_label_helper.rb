@@ -1,17 +1,8 @@
 module BadgeLabelHelper
-  def badge(*args)
-    badge_label(:badge, *args)
+  def badge(type = nil, msg)
+    opt_type = "badge-#{type}" unless type.blank?
+    clazz = ["badge", opt_type]
+    raw(content_tag :span, msg, :class => clazz.join(' '))
   end
 
-  def label(*args)
-    badge_label(:label, *args)
-  end
-
-  private
-  def badge_label(what, value, type = nil)
-    klass = [what]
-    klass << "#{what}-#{type}" if type.present?
-
-    %{<span class="#{klass.join(' ')}">#{value}</span>}.html_safe
-  end
-end
+ end

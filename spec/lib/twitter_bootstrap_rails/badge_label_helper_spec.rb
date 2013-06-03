@@ -10,13 +10,17 @@ include BadgeLabelHelper
 
 describe BadgeLabelHelper, :type => :helper do
   it "should return a basic bootstrap badge" do
-    badge('test').gsub(/\s/, '').downcase.should eql(BASIC_BADGE.gsub(/\s/, '').downcase)
+    badge(2).gsub(/\s/, '').downcase.should eql(BASIC_BADGE.gsub(/\s/, '').downcase)
   end
 
   it "should return a bootstrap badge with class" do
-    badge('waning', :warning).gsub(/\s/, '').downcase.should eql(BADGE_WITH_CLASS.gsub(/\s/, '').downcase)
+    badge('warning', 1).gsub(/\s/, '').downcase.should eql(BADGE_WITH_CLASS.gsub(/\s/, '').downcase)
   end
 end
 
-BASIC_BADGE = %{<span class="badge">test</span>}
-BADGE_WITH_CLASS = %{<span class="badge badge-warning">waning</span>}
+BASIC_BADGE = <<-HTML
+  <span class="badge">2</span>
+HTML
+BADGE_WITH_CLASS = <<-HTML
+  <span class="badge badge-warning">1</span>
+HTML
