@@ -206,23 +206,23 @@ If this is the case, you **must** use @import instead of `*=` in your manifest f
 
 By default, this gem overrides standard Bootstraps's Glyphicons with Font Awesome (http://fortawesome.github.com/Font-Awesome/).
 
-This should appear inside _bootstrap_and_overrides *(based on you twitter-bootstrap-rails version)*
+This is the default values in bootstrap_and_overrides(.less or .css, based on you twitter-bootstrap-rails version)*
 
-**From 2.2.7**
+**After 2.2.7**
 
-```css
+```less
 // Font Awesome
-@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
-@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
-@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
-@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
-@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+@fontAwesomeEotPath: font-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: font-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: font-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: font-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: font-url("fontawesome-webfont.svg#fontawesomeregular");
 @import "fontawesome/font-awesome";
 ```
 
 **Before 2.2.7**
 
-```css
+```less
 // Font Awesome
 @fontAwesomeEotPath: "/assets/fontawesome-webfont.eot";
 @fontAwesomeEotPath_iefix: "/assets/fontawesome-webfont.eot?#iefix";
