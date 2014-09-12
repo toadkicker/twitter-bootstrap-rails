@@ -14,6 +14,9 @@ module Twitter
         initializer 'twitter-bootstrap-rails.setup',
           :after => 'less-rails.after.load_config_initializers',
           :group => :all do |app|
+            
+            config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
             if defined?(Less)
               app.config.less.paths << File.join(config.root, 'vendor', 'toolkit')
             end
